@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_MapView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-Ww-W98">
+                                <rect key="frame" x="0.0" y="131" width="414" height="765"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-GN-3r6">
+                                <rect key="frame" x="20" y="89" width="219" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="AYs-9s-8bw"/>
+                                    <constraint firstAttribute="width" constant="219" id="x5v-ve-VXl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K9j-Fe-thF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S87-tF-cXr">
+                                <rect key="frame" x="269" y="89" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="B90-Cq-d7d"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qt7-V9-SpN"/>
+                                </constraints>
+                                <state key="normal" title="Get Directions"/>
+                                <connections>
+                                    <action selector="getDirections:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rk-Y3-z7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S87-tF-cXr" secondAttribute="trailing" constant="20" id="DB4-ZX-b3V"/>
+                            <constraint firstItem="Egu-Ww-W98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I7f-r5-HEQ"/>
+                            <constraint firstItem="zNA-GN-3r6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b0i-dV-Qto"/>
+                            <constraint firstItem="S87-tF-cXr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="o8y-4L-Qmp"/>
+                            <constraint firstItem="zNA-GN-3r6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="slx-9l-ljj"/>
+                            <constraint firstItem="Egu-Ww-W98" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t6o-wd-yIy"/>
+                            <constraint firstAttribute="bottom" secondItem="Egu-Ww-W98" secondAttribute="bottom" id="ufr-X5-Oxj"/>
+                            <constraint firstItem="Egu-Ww-W98" firstAttribute="top" secondItem="zNA-GN-3r6" secondAttribute="bottom" constant="8" id="uzP-nh-X4T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TW6-1G-Uaa"/>
+                    <connections>
+                        <outlet property="addressMapView" destination="Egu-Ww-W98" id="kAA-0v-vVJ"/>
+                        <outlet property="getLocation" destination="zNA-GN-3r6" id="4Ub-q4-M9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
